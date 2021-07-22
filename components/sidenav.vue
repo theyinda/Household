@@ -1,54 +1,54 @@
 <template>
   <div class="customer-dashboard__sidebar">
     <nav class="sidebar">
-      <ul class="side-nav">
-        <li class="side-nav_item">
-          <img src="../assets/images/home.svg" alt="logo" />
-          <a href="#" class="side-nav_link">
-            <span>Dashboard</span>
-          </a>
-        </li>
+        <nuxt-link to="/"
+        ><div class="side-nav_item">
+          <img src="../assets/images/home.svg" alt="icon" />
+          <p>Dashboard</p>
+        </div></nuxt-link
+      >
+        
 
-        <li class="side-nav_item">
-          <img src="../assets/images/customers.svg" alt="logo" />
-          <a href="#" class="side-nav_link">
-            <span>Customers</span>
-          </a>
-        </li>
+        <nuxt-link to="/customers"
+        ><div class="side-nav_item">
+          <img src="../assets/images/customers.svg" alt="icon" />
+          <p>Customers</p>
+        </div></nuxt-link
+      >
 
-        <li class="side-nav_item">
-          <img src="../assets/images/candidates.svg" alt="logo" />
-          <a href="#" class="side-nav_link">
-            <span>Candidates</span>
-          </a>
-        </li>
-        <li class="side-nav_item">
-          <img src="../assets/images/requests.svg" alt="logo" />
-          <a href="#" class="side-nav_link">
-            <span>Requests</span>
-          </a>
-        </li>
-        <li class="side-nav_item elephant">
-          <img src="../assets/images/payment.svg" alt="logo" />
-          <a href="#" class="side-nav_link">
-            <span>Payment</span>
-          </a>
-        </li>
+        <nuxt-link to="/candidates"
+        ><div class="side-nav_item">
+          <img src="../assets/images/candidates.svg" alt="icon" />
+          <p>Candidates</p>
+        </div></nuxt-link
+      >
+        <nuxt-link to="/requests"
+        ><div class="side-nav_item">
+          <img src="../assets/images/requests.svg" alt="icon" />
+          <p>Requests</p>
+        </div></nuxt-link
+      >
+        <nuxt-link to="/payment"
+        ><div class="side-nav_item">
+          <img src="../assets/images/payment.svg" alt="icon" />
+          <p>Payment</p>
+        </div></nuxt-link
+      >
 
-        <li class="side-nav_item">
-          <img src="../assets/images/reviews.svg" alt="logo" />
-          <a href="#" class="side-nav_link">
-            <span>Reviews</span>
-          </a>
-        </li>
+        <nuxt-link to="/reviews"
+        ><div class="side-nav_item">
+          <img src="../assets/images/reviews.svg" alt="icon" />
+          <p>Reviews</p>
+        </div></nuxt-link
+      >
 
-        <li class="side-nav_item">
-          <img src="../assets/images/settings.svg" alt="logo" />
-          <a href="#" class="side-nav_link">
-            <span>Settings</span>
-          </a>
-        </li>
-      </ul>
+        <nuxt-link to="/settings"
+        ><div class="side-nav_item">
+          <img src="../assets/images/settings.svg" alt="icon" />
+          <p>Settings</p>
+        </div></nuxt-link
+      >
+  
     </nav>
   </div>
 </template>
@@ -61,37 +61,45 @@ export default {}
 .customer-dashboard__sidebar {
   background: #fff;
   width: 245px;
-}
-.customer-dashboard__item {
-  background: #f3f6f8;
-  width: 100%;
+
+  /* position: fixed;
+ padding-top: 74px;
+  height: 900px; */
 }
 .side-nav_item {
-  margin-top: 40px;
-  text-align: left;
-  margin-left: 44px;
-}
-.side-nav_item span {
-  color: #6f8a9c;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 60px;
+  cursor: pointer;
 }
 .side-nav_item img {
-  margin: 0 15px 0 0px;
+  padding: 20px 20px 20px 32px;
 }
 
-.side-nav_item:hover {
-  /* transform: matrix(1, 0, 0, 1, 0, 0);
-  background: rgba(4, 37, 56, 0.3);
-  opacity: 0.2; */
-  color: #010025;
-  /* height: 60px; */
+.side-nav_item p {
+  color: #6f8a9c;
+  width: 100%;
+  padding: 21px 16px;
+  font-size: 15px;
+  margin: 0;
 }
-.side-nav_item span:hover {
-  color: #010025;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  background: rgba(4, 37, 56, 0.3);
-  opacity: 0.2;
-  color: #010025;
-  height: 60px;
-  width: 400px;
+
+a.nuxt-link-exact-active .side-nav_item,
+a:hover .side-nav_itemu {
+  background-color: rgba(4, 37, 56, 0.076);
 }
+
+a.nuxt-link-exact-active p,
+a:hover p {
+  color: #010025;
+  font-weight: 600;
+}
+
+a.nuxt-link-exact-active img,
+a:hover img {
+  background-color: #010025;
+  border-radius: 0 20px 20px 0;
+}
+
 </style>

@@ -20,8 +20,9 @@
               <button class="btn-2">Candidates</button>
             </div>
           </div>
+          
           <table-data />
-           <householdfooter />
+          <householdfooter />
         </section>
       </div>
     </div>
@@ -34,11 +35,16 @@ import householdfooter from '../components/householdfooter.vue'
 import Sidenav from '../components/sidenav.vue'
 
 export default {
-  components: { householdheader, Sidenav, householdfooter },
+  data() {
+    return {
+      props: ['user'],
+      components: { householdheader, Sidenav, householdfooter },
+    }
+  },
 }
 </script>
 
-<style>
+<style scoped>
 * {
   margin: 0;
   padding: 0;

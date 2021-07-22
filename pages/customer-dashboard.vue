@@ -34,11 +34,16 @@ import householdfooter from '../components/householdfooter.vue'
 import Sidenav from '../components/sidenav.vue'
 
 export default {
-  components: { householdheader, Sidenav, householdfooter },
+  data() {
+    return {
+      components: { householdheader, Sidenav, householdfooter },
+      props: ["user"]
+    }
+  },
 }
 </script>
 
-<style>
+<style scoped>
 * {
   margin: 0;
   padding: 0;
